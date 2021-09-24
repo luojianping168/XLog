@@ -1,0 +1,3 @@
+include ':xlog'
+include ':app'
+rootProject.name = "XLogHelper"

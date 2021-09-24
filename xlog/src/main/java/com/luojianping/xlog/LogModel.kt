@@ -1,4 +1,4 @@
-package com.allens.xlog
+package com.luojianping.xlog
 
 enum class LogModel(var model: Int) {
     //异步写入 release 下建议 非实时写入

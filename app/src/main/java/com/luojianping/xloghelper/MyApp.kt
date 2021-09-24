@@ -1,9 +1,9 @@
-package com.allens.xloghelper
+package com.luojianping.xloghelper
 
 import android.app.Application
-import com.allens.xlog.LogLevel
-import com.allens.xlog.LogModel
-import com.allens.xlog.XLogHelper
+import com.luojianping.xlog.LogLevel
+import com.luojianping.xlog.LogModel
+import com.luojianping.xlog.XLogHelper
 
 class MyApp :Application(){
 

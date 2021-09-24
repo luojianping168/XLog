@@ -1,4 +1,4 @@
-package com.allens.xlog
+package com.luojianping.xlog
 
 import android.content.Context
 import com.tencent.mars.xlog.Log

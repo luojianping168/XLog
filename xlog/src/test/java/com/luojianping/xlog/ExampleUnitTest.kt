@@ -1,4 +1,4 @@
-package com.allens.xlog
+package com.luojianping.xlog
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.allens.xlog
+package com.luojianping.xlog
 
 enum class LogLevel(var level: Int) {
     LEVEL_ALL(0),

@@ -1,8 +1,9 @@
-package com.allens.xloghelper
+package com.luojianping.xloghelper
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.allens.xlog.XLogHelper
+import com.luojianping.xlog.LogPlus
+import com.luojianping.xlog.XLogHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
             for (i in 1..10) {
                 XLogHelper.i("======================> %s", "阿斯蒂芬")
+                LogPlus.w( "阿斯蒂芬")
             }
             for (i in 1..10) {
                 XLogHelper.e("======================>  %s index  %s", "fuck ", i)

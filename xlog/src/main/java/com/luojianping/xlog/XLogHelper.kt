@@ -2,15 +2,14 @@ package com.luojianping.xlog
 
 import android.content.Context
 import com.tencent.mars.xlog.Log
-import com.tencent.mars.xlog.Xlog
 
 object XLogHelper {
 
 
-    init {
-        System.loadLibrary("c++_shared")
-        System.loadLibrary("marsxlog")
-    }
+  /*  init {
+        System.loadLibrary("c++_shared");
+        System.loadLibrary("marsxlog");
+    }*/
 
 
     //创建

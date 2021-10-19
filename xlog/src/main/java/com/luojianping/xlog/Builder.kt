@@ -5,6 +5,9 @@ import com.tencent.mars.xlog.Log
 import com.tencent.mars.xlog.Xlog
 
 class Builder(context: Context) {
+    init {
+        Log.toastSupportContext = context
+    }
 
     companion object {
         //日志的tag
@@ -215,26 +218,19 @@ class Builder(context: Context) {
         )
 
         android.util.Log.i(tag, "Xlog=========================================<")
-        Xlog.setConsoleLogOpen(consoleLogOpen)
+        Xlog.open(true, logLevel.level, model.model, cachePath, logPath, namePreFix, pubKey)
+        val xlog = Xlog()
         //每天一个日志文件
         if (oneFileEveryday) {
-            Xlog.setMaxFileSize(0)
+            xlog.setMaxFileSize(0, 0)
         } else {
-            Xlog.setMaxFileSize(maxFileSize)
+            xlog.setMaxFileSize(0, maxFileSize)
         }
 
-        Xlog.setMaxAliveTime((maxAliveTime * 24 * 60 * 60).toLong())
+        xlog.setMaxAliveTime(0, (maxAliveTime * 24 * 60 * 60).toLong())
 
-        Xlog.appenderOpen(
-            logLevel.level,
-            model.model,
-            cachePath,
-            logPath,
-            namePreFix,
-            cacheDays,
-            pubKey
-        )
         Log.setLogImp(Xlog())
+        Log.setConsoleLogOpen(consoleLogOpen)
     }
 
 

@@ -1,7 +1,7 @@
 ext {
     PUBLISH_GROUP_ID = "io.github.luojianping168"        //项目包名
     PUBLISH_ARTIFACT_ID = 'XLog'            //项目名
-    PUBLISH_VERSION = '0.0.2'                    //版本号
+    PUBLISH_VERSION = '0.0.3'                    //版本号
 }
 apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
 apply plugin: 'com.android.library'
@@ -14,14 +14,14 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
         ndk {
-            abiFilter "armeabi-v7a"
+            abiFilter "armeabi-v7a,arm64-v8a"
         }
     }
 
